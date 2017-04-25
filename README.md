@@ -1,5 +1,12 @@
 # Coffy
 
+## Công việc cần làm
+1. Nguyên bổ xung thư mục crawling và hướng dẫn ReadMe.md để học viên khóa sau hiểu cách cào dữ liệu bằng NightMare.js
+
+2. Đạt tạo ra file model dạng class để đóng gói các method. Giữ lại các method cũ để đối chiếu so sánh.
+
+3. Hoàn thiện phần Vue.js kết nối REST sử dụng Axios --> Đạt
+
 ### Sử dụng REST 
 1. Tìm địa điểm theo lat, long, khoảng cách r, loại quán type
 
