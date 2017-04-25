@@ -3,7 +3,7 @@
     "username": "postgres",
     "password": "admin",
     "database": "coffy",
-    "host": "localhost",
+    "host": "163.44.206.220",
     "port": 5432,
     "dialect": "postgres",
     "schema": "coffy",
