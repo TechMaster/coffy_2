@@ -10,8 +10,7 @@ const async = require('async');
 const { db, } = require('./pgp');
 const Promise = require('bluebird');
 
-const Locations = require('./app/models/locations');
-const location = new Locations();
+const location = require('./app/models/locations');
 
 nunjucks.configure('views', {
     autoescape: true,
