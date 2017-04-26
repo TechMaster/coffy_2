@@ -11,7 +11,7 @@ const { db, } = require('./pgp');
 const Promise = require('bluebird');
 
 const location = require('./app/models/locations');
-
+ 
 nunjucks.configure('views', {
     autoescape: true,
     cache: false,
