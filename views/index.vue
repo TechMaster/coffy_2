@@ -1,8 +1,6 @@
 <template>
 	<div id="myhome">
-		<div class="header" >
-			<myheader :search="search"></myheader>
-		</div>
+		<myheader :search="search"></myheader>
 		<section class="container-fluid tab">
 			<div class="container mieuta">
 				<div class="container" id="second-menu">

@@ -1,13 +1,14 @@
 {
     "development" : {
         "protocol" : "http",
-        "host"     : "localhost",
+        "host"     : "163.44.206.220",
         "port"     : 9200,
         "auth"     : "elastic:changeme"
     },
     "production" : {
         "protocol" : "http",
-        "host"     : "127.0.0.1",
-        "auth"     : "elastic:changeme"
+        "host"     : "163.44.206.220",
+        "auth"     : "elastic:changeme",
+        "port"     : 9300
     }
 }

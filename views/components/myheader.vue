@@ -1,5 +1,6 @@
 <!-- TODO: Hãy viết thành một component hoàn chỉnh -->
 <template lang="html">
+	<div class="header" >
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header">
@@ -36,6 +37,7 @@
 			</div>
 		</div>
 	</nav>
+	</div>
 </template>
 <script>
 	export default {

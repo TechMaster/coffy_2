@@ -48,13 +48,8 @@
 				<div class="info-map">
 					<h2>THÔNG TIN & BẢN ĐỒ</h2>
 					<hr/>
-					<!--<div class="restaurant-map">
-						<img src="/public/img/map.jpg" class="img-responsive">
-						</div>-->
 					<!-- mapdat -->
-						<iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q={{location.lat}},{{location.long}}&hl=es;z=14&amp;output=embed"></iframe><br />
-
-					<!-- map -->
+						<iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" :src="'https://maps.google.com/maps?q='+location.lat + ',' + location.long + '&hl=es;z=14&amp;output=embed'"></iframe><br />
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
 							<div class="restaurant-more-info">
@@ -463,8 +458,7 @@
 
 	//load('AIzaSyDKgeNCiN_GRLIJ9i7rTej65QloBOepets','3.24')
 
-
-    export default {
+   export default {
         data() {
             return {
                 location: {},
@@ -473,4 +467,3 @@
         }
     }
 </script>
-<!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsB1OF-sOPmmMd9bwLpJfJfrdumJ_A6dI&callback=initMap"></script>-->
