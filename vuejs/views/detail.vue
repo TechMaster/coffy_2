@@ -1,8 +1,6 @@
 <template lang="html">
 	<div id="detail">
-		<div class="header" >
-			<myheader></myheader>
-		</div>
+			<myheader :search="search"></myheader>
 		<section class="container-fluid tab">
 			<div class="container mieuta">
 				<div class="row">
@@ -444,12 +442,6 @@
 		<div class="footer">
 			<myfooter></myfooter>
 		</div>
-		<!--<footer class="container-fluid footer">-->
-		<!--<span>©TungSeven. Số 14, ngõ 4, Nguyễn Đình Chiểu, quận Hai Bà Trưng, Hà nội, Việt nam.</span>-->
-		<!--</footer>-->
-		<span class="waves-effect" id="btn-to-top">
-		<i class="fa fa-angle-double-up" aria-hidden="true"></i>
-		</span>
 	</div>
 </template>
 <script>

@@ -7,11 +7,17 @@
         float: right;
         text-align: right;
     }
+    .navbar-header{
+      display: none
+    }
 }
 
 @media (max-width: 700px) {
     .navbar-right .account {
         text-align: center;
+    }
+    .logoHeadLg{
+      display: none;
     }
 }
 
@@ -40,7 +46,6 @@
 
     .radius {
         float: right;
-        margin-right: -35px;
     }
 
     .width-img-100 {

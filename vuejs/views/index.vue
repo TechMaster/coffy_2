@@ -17,41 +17,47 @@
 								<input id="inType2" name="inType2">
 							</form>
 						</div>
-						<div class="col-sm-2 col-xs-12 district">
-							<select name="district" class="select" id="district" v-on:change="findDist()">
-								<option style="display: none">- Quận/Huyện -</option>
-								<option value="1">Quận Hà Đông</option>
-								<option value="2">Quận Hai Bà Trưng</option>
-								<option value="3">Quận Hoàn Kiếm</option>
-								<option value="4">Quận Ba Đình</option>
-								<option value="5">Quận Thanh Xuân</option>
-								<option value="6">Quận Đống Đa</option>
-								<option value="7">Quận Cầu Giấy</option>
-								<option value="8">Quận Tây Hồ</option>
-								<option value="9">Quận Gia Lâm</option>
-								<option value="10">Quận Hoàng Mai</option>
-								<option value="11">Quận Nam Từ Liêm</option>
-								<option value="12">Quận Bắc Từ Liêm</option>
-								<option value="13">Quận Long Biên</option>
-							</select>
+
+						<div class="group-form">
+							<div class="col-sm-2 col-xs-12 district form-group">
+									<select name="district" class="select form-control" id="district" onchange="load_form2()">
+											<option>- Quận/Huyện -</option>
+											<option value="1">Quận Hà Đông</option>
+											<option value="2">Quận Hai Bà Trưng</option>
+											<option value="3">Quận Hoàn Kiếm</option>
+											<option value="4">Quận Ba Đình</option>
+											<option value="5">Quận Thanh Xuân</option>
+											<option value="6">Quận Đống Đa</option>
+											<option value="7">Quận Cầu Giấy</option>
+											<option value="8">Quận Tây Hồ</option>
+											<option value="9">Quận Gia Lâm</option>
+											<option value="10">Quận Hoàng Mai</option>
+											<option value="11">Quận Nam Từ Liêm</option>
+											<option value="12">Quận Bắc Từ Liêm</option>
+											<option value="13">Quận Long Biên</option>
+									</select>
+							</div>
+
+							<div class="col-sm-2 col-xs-12 type form-group">
+									<select name="type" class="select form-control" id="type" v-on:change="findDist()">
+											<option>- Thể loại -</option>
+											<option value="1">Restaurant</option>
+											<option value="2" selected="selected">Café/Dessert</option>
+									</select>
+							</div>
+
+							<div class="col-sm-2 col-xs-12 radius form-group">
+									<select name="r" class="select form-control" id="r" v-on:change="findNear()">
+											<option>- Khoảng cách -</option>
+											<option value="200">200m</option>
+											<option value="500">500m</option>
+											<option value="1000">1 km</option>
+											<option value="2000">2 km</option>
+											<option value="5000">5 km</option>
+									</select>
+							</div>
 						</div>
-						<div class="col-sm-2 col-xs-12 type">
-							<select name="type" class="select" id="type">
-								<option style="display: none">- Thể loại -</option>
-								<option value="1">Restaurant</option>
-								<option value="2" selected="selected">Café/Dessert</option>
-							</select>
-						</div>
-						<div class="col-sm-2 col-xs-12 radius">
-							<select name="r" class="select" id="r" v-on:change="findNear()" >
-								<option style="display: none">- Khoảng cách -</option>
-								<option value="200">200m</option>
-								<option value="500">500m</option>
-								<option value="1000">1 km</option>
-								<option value="2000">2 km</option>
-								<option value="5000">5 km</option>
-							</select>
-						</div>
+
 						<div class="col-sm-2 col-xs-12 submit" hidden="hidden">
 							<input type="button" onclick="nearFunction()" value="FIND NEAR">
 							<input type="button" onclick="distFunction()" value="FIND DIST">
@@ -117,7 +123,7 @@
                         })
                         .catch(error => {
                             this.locations = [];
-                        }); 
+                        });
                     });
                 }
             },

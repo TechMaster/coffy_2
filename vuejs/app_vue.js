@@ -99,6 +99,7 @@ app.get('/detail/:id', (req, res) => {
 								{ script: '/public/js/script.js' },
 								{ style : '/public/css/animate.css', rel : 'stylesheet' },
 								{ style : '/public/css/detail_style.css', rel : 'stylesheet' },
+								{ style : '/public/css/style.css', rel : 'stylesheet' }
 							]
 						},
 						components : ['myheader', 'login', 'myfooter']
