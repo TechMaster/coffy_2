@@ -34,9 +34,9 @@
                 <li class="active"><a href="/">Trang chủ</a></li>
                 <li><a href="#">Mới nhất</a></li>
             </ul>
-            <form class="navbar-form navbar-left">
+            <form class="navbar-form navbar-left" action="/search" method="post">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder=" Địa điểm, Nhà hàng...">
+                    <input type="text" class="form-control" name="term" placeholder=" Địa điểm, Nhà hàng...">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="submit">
                             <i class="glyphicon glyphicon-search"></i>
@@ -59,14 +59,6 @@
     <div class="container mieuta">
         <div class="container" id="second-menu">
             <div class="row">
-
-                <div class="col-sm-2 col-xs-12 tops">
-                    <ul class="nav">
-                        <li>
-                            <span>Tops</span>
-                        </li>
-                    </ul>
-                </div>
 
                 <!--<button id="submit" name="submit">FIND</button>-->
 

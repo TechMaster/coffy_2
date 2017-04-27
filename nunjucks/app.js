@@ -7,10 +7,10 @@ const bodyParser = require("body-parser");
 const nunjucks = require('nunjucks');
 const path = require('path');
 const async = require('async');
-const { db, } = require('./pgp');
+const { db, } = require('../pgp');
 const Promise = require('bluebird');
 
-const location = require('./app/models/locations');
+const location = require('../app/models/locations');
  
 nunjucks.configure('views', {
     autoescape: true,
@@ -19,17 +19,17 @@ nunjucks.configure('views', {
     watch: true
 });
 
-app.use("/public", express.static(__dirname + "/public"));
-app.engine('html', nunjucks.render);
-app.set("views", path.resolve(__dirname, "views"));
-app.set("views engine", "html");
+app.use("/public", express.static(__dirname + "/../public"));
 
+app.engine('html', nunjucks.render);
+app.set ('views', path.join (__dirname, '/views'));
+app.set("views engine", "html");
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.listen(3000, function () {
-    console.log('Server listening on port 3000!')
+app.listen(4000, function () {
+    console.log('Server listening on port 4000!')
 });
 let log = console.log;
 
@@ -81,6 +81,18 @@ app.get('/', (req, res) => {
         .catch(error => {
             console.log(error);
         });
+});
+
+app.post('/search', (req, res) => {
+    let search_term = req.body['term'];
+    location.search (search_term)
+    .then (data => {
+        async.map (data, location.mergeData, (err, locs) => {
+            //res.json (locs);
+            //console.log(locs);
+            res.render('index1.html', {'datas': locs});
+        });
+    });
 });
 
 //GET detail page

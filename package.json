@@ -20,7 +20,7 @@
     "express-vue": "^3.9.11",
     "fs": "0.0.1-security",
     "image-downloader": "^3.2.1",
-    //"nightmare": "^2.10.0",
+    "nightmare": "^2.10.0",
     "nunjucks": "^3.0.0",
     "path": "^0.12.7",
     "pg-monitor": "^0.7.1",
